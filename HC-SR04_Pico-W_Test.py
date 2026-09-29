@@ -1,3 +1,4 @@
+# I wrote this code with the help of a simple online tutorial. This code verified distance sensing with the HC-SR04. 
 from machine import Pin
 import utime
     
