@@ -1,4 +1,6 @@
-
+# This code was written purely using AI.
+# I gave my original HC-SR04 script to AI and asked it to implment the JSON Schema and Payload I had created into the full achitecture workflow.
+# This code was working after the first AI prompt. 
 from machine import Pin
 import utime
 import network
