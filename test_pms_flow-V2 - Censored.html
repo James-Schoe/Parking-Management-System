@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Send Teams Message</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 24px; }
+    button { padding: 12px 18px; font-size: 16px; cursor: pointer; }
+    #status { margin-top: 16px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <h2>Trigger Parking Flow Test</h2>
+  <button id="btnSend">Send message</button>
+  <div id="status"></div>
+
+  <script>
+    const FLOW_URL = "Censored_URl"; 
+    const SECRET = "Censored_Secret";
+
+    const statusEl = document.getElementById("status");
+    const btn = document.getElementById("btnSend");
+
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      statusEl.textContent = "Sending...";
+
+      try {
+        const payload = {
+          bay_1: "true",
+          bay_2: "true",
+          bay_3: "false", 
+          secret: SECRET
+        };
+
+        const res = await fetch(FLOW_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const text = await res.text();
+
+        if (!res.ok) {
+          statusEl.textContent = `Failed (${res.status}):\n${text}`;
+        } else {
+          statusEl.textContent = "Sent ✅\n" + text;
+        }
+      } catch (err) {
+        statusEl.textContent = "Error:\n" + err.message;
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
