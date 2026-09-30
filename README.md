@@ -39,3 +39,10 @@ After creating a working prototype in my own Microsoft tenant, the next step was
 # Status
 The system was successfully prototyped, integrated into BMW’s approved workflow, and handed over for final completion. The architecture and implementation strategy remain fully functional and scalable for future development. Although, this Repo only demonstrates the PMS prototype I made in my personal tenant. The full BMW integrated version of this project is not displayed in this Repo to protect sensitive company data. 
 
+# Azure Request to Updated UI Demonstration
+
+https://github.com/user-attachments/assets/0ba17b9a-e16e-4e22-b172-19f2e4aed420
+
+
+
+
