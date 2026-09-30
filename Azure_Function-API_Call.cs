@@ -1,3 +1,8 @@
+// Inital Azure Function code: The Azure Function was triggered by a HTTP request from the Pico W. 
+// This code lets calls the Graph API and write parking statuses into a SharePoint list. 
+// The later version of this system encorperated a JSON payload & schema, but can't be displayed due to company policy. 
+// While AI helped me write this code, I wrote and understood every line of this code at the time of creating the script, (hence logical comments). 
+
 using System.Net;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
